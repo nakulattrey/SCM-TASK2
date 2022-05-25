@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+*
+{margin:0;
+padding:0;}
+
+
+.uttpam img
+{border-radius:40px;
+box-shadow:8px 8px 8px black;}
+
+.dosas img
+{border-radius:40px;}
+
+.beverages img
+{border-radius:40px;
+box-shadow:8px 8px 8px black;}
+
+.vada img
+{border-radius:40px;}
+
+img .uttpam
+{height:450px;
+width:300px;}
+
+@media screen and (max-width:1000px)
+{.dosas,.uttpam,.beverages,.vada
+{grid-template-columns:repeat(2,1fr);}
+}
+
+
+
+
+button
+{height:50px;
+width:160px;
+text-align: center;}
+
+
+
+header
+{background-color:black;
+color:orange;
+padding:15px;
+text-align:center;
+font-size:3.9rem;
+font-family:ui-rounded;}
+
+body
+{margin:0px;
+/*background-image:url("https://media.istockphoto.com/photos/healthy-flat-lay-of-sliced-vegetables-composition-picture-id1198220441?k=20&m=1198220441&s=612x612&w=0&h=u9Z7_jok37dMOl41oRovtsIyUk_yWDwH_pADOOwSalg=");
+backgound-repeat:no-repeat;
+background-attachment:fix;
+background-size:cover;*/}
+
+nav ul
+{place-items:center;
+background-color:orange;
+opacity:70%;
+padding:15px;}
+
+nav a
+{text-decoration:none;
+display:inline-block;
+list-style-type:none;
+margin-left:99px;
+color:black;
+opacity:100%;
+font-size:1.6rem;}
+
+nav a:hover
+{color:red;
+transform:scale(1.08);
+font-weight:700;}
+
+
+
+
+.dosas
+{background-color:black;
+display:grid;
+grid-template-columns: repeat(3,1fr);
+padding:30px 20px;
+grid-column-gap:20px;
+grid-row-gap:30px;}
+
+.dosas img
+{height:300px;
+width;100%;
+object-fit:cover;
+}
+
+.dosas img:hover
+{transform:scale(1.08);
+border:7px solid orange;
+border-radius:40px;}
+
+.dosas h3
+{color:orange;
+text-align:center;
+margin:10px;}
+
+.dosas button
+{padding:5px 30px;
+border-radius:10px;
+border:2px solid orange;
+background-color:orange;
+color:black;
+font-size:20px;
+diplay;block;
+margin:0 auto;
+text-align:center;}
+
+.dosas a
+{text-decoration:none;
+text-align:center;
+color:black;}
+
+.dosas button:hover
+{background-color:black;
+border:3px solid orange;
+font-weight:700;}
+
+.dosas a:hover
+{color:orange;}
+
+.dosa-heading
+{border-left:7px solid black;
+padding:7px;
+font-size:1.7rem;
+background-color:orange;
+display:inline-block;
+color:black;}
+
+
+
+
+
+
+.uttpam
+{background-color:orange;
+display:grid;
+grid-template-columns: repeat(3,1fr);
+padding:30px 20px;
+grid-column-gap:20px;
+grid-row-gap:30px;}
+
+.uttpam img
+{height:300px;
+width:450px;
+object-fit:cover;
+outline:black;}
+
+.uttpam img:hover
+{transform:scale(1.08);
+border:7px solid black;
+border-radius:40px}
+
+.uttpam h3
+{color:black;
+text-align:center;
+margin:10px;}
+
+.uttpam button
+{padding:5px 30px;
+border-radius:10px;
+border:2px solid black;
+background-color:black;
+color:orange;
+font-size:20px;
+diplay;block;
+margin:0 auto;
+text-align:center;}
+
+.uttpam a
+{text-decoration:none;
+text-align:center;
+color:orange;}
+
+.uttpam button:hover
+{background-color:orange;
+border:3px solid black;
+font-weight:700;}
+
+.uttpam a:hover
+{color:black;}
+
+.uttpam-heading
+{border-left:7px solid orange;
+padding:7px;
+font-size:1.7rem;
+background-color:black;
+display:inline-block;
+color:orange;}
+
+
+
+
+.vada
+{background-color:black;
+display:grid;
+grid-template-columns: repeat(3,1fr);
+padding:30px 20px;
+grid-column-gap:20px;
+grid-row-gap:30px;}
+
+.vada img
+{height:300px;
+width;100%;
+object-fit:cover;
+}
+
+.vada img:hover
+{transform:scale(1.08);
+border:7px solid orange;
+border-radius:40px}
+
+.vada h3
+{color:orange;
+text-align:center;
+margin:10px;}
+
+.vada button
+{padding:5px 30px;
+border-radius:10px;
+border:2px solid orange;
+background-color:orange;
+color:black;
+font-size:20px;
+diplay;block;
+margin:0 auto;
+text-align:center;}
+
+.vada a
+{text-decoration:none;
+text-align:center;
+color:black;}
+
+.vada button:hover
+{background-color:black;
+border:3px solid orange;
+font-weight:700;}
+
+.vada a:hover
+{color:orange;}
+
+.vada-heading
+{border-left:7px solid black;
+padding:7px;
+font-size:1.7rem;
+background-color:orange;
+display:inline-block;
+color:black;}
+
+
+
+
+.beverages 
+{background-color:orange;
+display:grid;
+grid-template-columns: repeat(3,1fr);
+padding:30px 20px;
+grid-column-gap:20px;
+grid-row-gap:30px;}
+
+.beverages img
+{height:300px;
+width:450px;
+object-fit:cover;
+outline:black;}
+
+.beverages img:hover
+{transform:scale(1.08);
+border:7px solid black;
+border-radius:40px}
+
+.beverages h3
+{color:black;
+text-align:center;
+margin:10px;}
+
+.beverages button
+{padding:5px 30px;
+border-radius:10px;
+border:2px solid black;
+background-color:black;
+color:orange;
+font-size:20px;
+diplay;block;
+margin:0 auto;
+text-align:center;}
+
+.beverages a
+{text-decoration:none;
+text-align:center;
+color:orange;}
+
+.beverages button:hover
+{background-color:orange;
+border:3px solid black;
+font-weight:700;}
+
+.beverages a:hover
+{color:black;}
+
+.beverages-heading
+{border-left:7px solid orange;
+padding:7px;
+font-size:1.7rem;
+background-color:black;
+display:inline-block;
+color:orange;}
+
+
+
+
+
+.review input
+{size:1.5rem;
+padding:10px;
+color:white;
+background-color:black;
+color:white;
+border:0px;
+border-bottom:2px solid white;
+width:290px}
+
+
+
+.review input::placeholder
+{color:white;}
+
+
+
+textarea
+{height:100px;
+width:300px;
+font-weight:bold;
+padding:7px;
+font-size:1.23rem;
+font-style:monospace;
+border-radius:10px}
+
+
+
+textarea:hover
+{box-shadow:0px 0px 8px 4px orange;
+padding:4px}
+
+
+
+#submit
+{padding:5px 10px;
+color:black;
+background-color:white;
+border-radius:0px;
+border-color:white;
+border-radius:5px;
+border-color:white;
+height:40px;
+width:155px;
+font-size:1.13rem}
+
+
+#reset:hover
+{transform:scale(1.08);
+font-weight:bold;
+color:red;
+border:2px solid red}
+
+
+
+#reset
+{padding:5px 10px;
+color:black;
+background-color:white;
+border-radius:5px;
+border-color:white;
+height:40px;
+width:155px;
+font-size:1.13rem}
+
+
+
+#submit:hover
+{transform:scale(1.08);
+font-weight:bold;
+color:#86DC3D;
+border:3px solid green}
+
+
+
+#your-review
+{color:orange;
+font-size:2.7rem;
+font-family:sans-serif;
+font-style:italic;}
+
+#contact-us
+{color:black;
+font-size:2.7rem;
+font-family:sans-serif;
+font-style:italic;}
+
+
+.review
+{background-image:linear-gradient(to bottom right,black 70%,#580acf);
+margin:10px 0px 10px 20px;
+height:700px;
+width:50%;
+display:inline-block;
+padding:10px;}
+
+
+
+
+.table
+{color:white;
+text-align:left;
+font-size:1.23rem;
+cell-padding:10px;
+margin:10px;
+cell-spacing:70px;}
+
+th
+{color:black;
+text-align:left;
+font-size:1.43rem;
+cellpadding:10px;
+margin:10px;
+cellspacing:70px;}
+
+
+
+
+.rating img
+{height:40px;
+weight:40px;}
+
+.rating
+{background-color:black;
+height:500px;
+width:100%;
+margin:0px -5px -10px -5px}
+
+
+
+.emoji img
+{   height:60px;
+    width:60px;
+    color: #f7941d;
+    margin-top: 4%;
+    margin-left:4%;
+    opacity:0.3}
+
+
+.icon img
+{   height:60px;
+    width:60px;
+    color: #f7941d;
+    margin-top: 4%;
+    margin-left:4%;}
+
+
+
+.img1:hover
+{box-shadow:0px 0px 1px 2px blue;
+border-radius:50%;
+padding:2px}
+
+.img2:hover
+{box-shadow:0px 0px 1px 2px #00ff3a;
+border-radius:50%;
+padding:2px}
+
+.img3:hover
+{box-shadow:0px 0px 1px 2px yellow;
+border-radius:50%;
+padding:2px}
+
+.img4:hover
+{box-shadow:0px 0px 1px 2px cyan;
+border-radius:50%;
+padding:2px}
+
+.img5:hover
+{box-shadow:0px 0px 1px 2px red;
+border-radius:50%;
+padding:2px}
+
+.emj1:hover
+{transform:scale(1.1);
+opacity:1}
+
+.emj2:hover
+{transform:scale(1.1);
+opacity:1}
+
+.emj3:hover
+{transform:scale(1.1);
+opacity:1}
+
+.emj4:hover
+{transform:scale(1.1);
+opacity:1}
+
+.emj5:hover
+{transform:scale(1.1);
+opacity:1}
+
+#menu-list:hover
+{float: right!important;}
+
+
+     </style>
+    <title>South-Indian</title>
+    <link rel="icon" href="https://cdn.iconscout.com/icon/free/png-256/lemon-fruit-food-citric-acid-citrus-healthy-31181.png">
+</head>
+<body>
+<header><b>SOUTH-INDIAN<b></header><br><br><br>
+<nav> 
+    <ul>
+		<a href="#dosa-id"><li>Dosas</li></a>
+        	<a href="#uttpam-id"><li>Uttapam</li></a>
+        	<a href="#vada-id"><li>Vada-Idli</li></a>
+        	<a href="#beverages-id"><li>Beverages</li></a>
+	<a href="#contact"><li>Your Review/Contact Us</li></a>
+    </ul>
+</nav><br><br>
+
+<! --dosa--> 
+<div class="dosa-heading" id="dosa-id"><b>DOSAS:&nbsp&nbsp<b><br></div><br><br>
+    <div class="dosas">
+      <div>
+        <img src="https://vismaifood.com/storage/app/uploads/public/8b4/19e/427/thumb__1200_0_0_0_auto.jpg">
+        <h3>Masala Dosa</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/dosa-home-sector-46/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gTWFzYWxhIERvc2EiLCJkaXNoX2lkcyI6WyJkMzgzMWJhODVlZGFmYzIxYjBhZTI5YzZlNjAzZTA3Zl8yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://www.tarladalal.com/members/9306/procstepimgs/paneer-chilly-dosa-28-10-189231.jpg" ">
+        <h3>Paneer Dosa</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/katani-sweets-phase-3-mohali/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gUGFuZWVyIERvc2EiLCJkaXNoX2lkcyI6WyJmMDYzMjI0MDk2NWI1ZDJlMjcwYjBiOTM1ZWRlN2Q4ZF8yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</a></button></center>
+      </div>
+      <div>
+        <img src="https://order.b-cdn.net/wp-content/uploads/2020/06/Butter_Masala_Dosa.jpg">
+        <h3>Butter Masala Dosa</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/sundarams-sector-26/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gVmVnIE1hc2FsYSBEb3NhIiwiZGlzaF9pZHMiOlsiMjVmNGFkMDZkMDY5MGY5YjExYTA4ZjUxYmQ3MDk2MTJfMiJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://media.istockphoto.com/photos/cheese-masala-dosa-recipe-with-sambar-and-chutney-selective-focus-picture-id1156896083?k=20&m=1156896083&s=612x612&w=0&h=_TOEluPtKxmbkt_80JWO2GN0v_w2ZTG0uUaHjk2TSEY=">
+        <h3>Veg Masala Dosa</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/sagar-ratna-1-sector-17/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gVmVnIE1hc2FsYSBEb3NhIiwiZGlzaF9pZHMiOlsiMjVmNGFkMDZkMDY5MGY5YjExYTA4ZjUxYmQ3MDk2MTJfMiJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://res.cloudinary.com/swiggy/image/upload/f_auto,q_auto,fl_lossy/pcmigxtulo0xphkpofqk">
+        <h3>Plain Dosa</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/karthik-sector-47/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gUGxhaW4gRG9zYSIsImRpc2hfaWRzIjpbIjdkNTdhNDU5ZmQwZmE4ODE2MmRlOGYzMWZmZmExNzVjXzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://us.123rf.com/450wm/indianfoodimages/indianfoodimages1810/indianfoodimages181002769/110758489-onion-rava-masala-dosa-is-a-south-indian-instant-breakfast-served-with-chutney-and-sambar-over-moody.jpg?ver=6">
+        <h3>Butter Onion Masala Dosa</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/avin-karthik-phase-5-mohali/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gUGxhaW4gRG9zYSIsImRpc2hfaWRzIjpbIjdkNTdhNDU5ZmQwZmE4ODE2MmRlOGYzMWZmZmExNzVjXzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</button></a></center>
+      </div>
+    </div><br><br>
+
+<! --uttpam--> 
+<div class="uttpam-heading" id="uttpam-id"><b>UTTPAM:&nbsp&nbsp<b><br></div><br><br>
+    <div class="uttpam">
+      <div>
+        <img src="https://sanjeevkapoor.com/UploadFiles/RecipeImages/Onion-Uttapam---SK-Khazan.jpg" height="450px" width="300px">
+        <h3>Onion Uttapam</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/karthik-sector-47/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gT25pb24gVXR0YXBhbSIsImRpc2hfaWRzIjpbImJhNWY0MGZlMDFkZWM0ODIxNWIyZWYxNjNlMDdmNjhmXzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://img-global.cpcdn.com/recipes/45b553990cbce7a8/1200x630cq70/photo.jpg" height="450px" width="300px">
+        <h3>Onion Tomato Uttapam</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/shree-suvarnam-sector-35/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gT25pb24gVXR0YXBhbSIsImRpc2hfaWRzIjpbImJhNWY0MGZlMDFkZWM0ODIxNWIyZWYxNjNlMDdmNjhmXzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</a></button></center>
+      </div>
+      <div>
+        <img src="http://4.bp.blogspot.com/-vPqOxr1AxJA/Vdxv3JYUv5I/AAAAAAAADVI/DW3t4ueR8y4/w1200-h630-p-k-no-nu/paneer-uttapam7.jpg" height="450px" width="300px">
+        <h3>Panner Uttapam</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/karthik-sector-47/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gUGFuZWVyIFV0dGFwYW0iLCJkaXNoX2lkcyI6WyI2Y2VlZWNkODlkMjhmZGE0NDY2Zjg2ODBiMDdmN2NmZF8yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://akm-img-a-in.tosshub.com/aajtak/images/story/202106/uttapam-sixteen_nine.jpg?size=948:533" height="450px" width="300px">
+        <h3>Mix Veg. Uttapam</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/delhi-special-paranthe-wali-gali-1-sector-22/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gUGFuZWVyIFV0dGFwYW0iLCJkaXNoX2lkcyI6WyI2Y2VlZWNkODlkMjhmZGE0NDY2Zjg2ODBiMDdmN2NmZF8yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</button></a></center>
+      </div>
+      <div>
+        <img src="http://cdn.shopify.com/s/files/1/0404/5848/5921/products/Plain_Uttapam.jpg?v=1597176442" height="450px" width="300px">
+        <h3>Plain Uttapam</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/dosa-home-sector-46/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gUGxhaW4gVXR0YXBhbSIsImRpc2hfaWRzIjpbImU3MjNmNzgyODMwYzczNWJmYzI0YTdmNDJmNWNkZmU4XzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://image.shutterstock.com/image-photo/upma-made-samolina-rava-most-260nw-1904781007.jpg"  height="450px" width="300px">
+        <h3>Upma</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/shree-suvarnam-sector-35/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gVXBtYSIsImRpc2hfaWRzIjpbImEwNDYzZDIxMmZiNTI5Mjk3ODZiYTY4OTJmODkwOWQ5XzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</button></a></center>
+      </div>
+    </div><br><br>
+
+<! --vada idli--> 
+<div class="vada-heading" id="vada-id"><b>VADA-IDLI:&nbsp&nbsp<b><br></div><br><br>
+    <div class="vada">
+      <div>
+        <img src="https://www.indianhealthyrecipes.com/wp-content/uploads/2021/01/masala-vada-chana-dal-vada.jpg">
+        <h3>Dal Vada</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/avin-karthik-phase-5-mohali/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gRGFsIFZhZGEiLCJkaXNoX2lkcyI6WyJjYTAyOWViYzNkNzQyNmJhMjUwZTg1ZjY0NGZjNTkyM18yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://image.shutterstock.com/z/stock-photo-sambar-vada-also-known-as-medu-vada-a-popular-south-indian-food-served-with-green-red-and-coconut-664007845.jpg" width="500px">
+        <h3>Sambhar Vada</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/avin-karthik-phase-5-mohali/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gRGFsIFZhZGEiLCJkaXNoX2lkcyI6WyJjYTAyOWViYzNkNzQyNmJhMjUwZTg1ZjY0NGZjNTkyM18yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</a></button></center>
+      </div>
+      <div>
+        <img src="https://thumbs.dreamstime.com/b/idli-sambar-indian-food-36638188.jpg">
+        <h3>Idli Sambhar</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/shree-ganesh-sector-15/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gSWRsaSBTYW1iYXIiLCJkaXNoX2lkcyI6WyJlMjhhM2RlNDAyMzAyNzFjZjQxMTU5M2FjNmM0NWMwZF8yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://thumbs.dreamstime.com/b/medu-vada-dal-vadai-south-indian-breakfast-snack-served-chutney-medu-vada-dal-vadai-south-indian-breakfast-snack-186700824.jpg">
+        <h3>Vada Without Sambhar</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/shree-suvarnam-sector-35/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gVmFkYSIsImRpc2hfaWRzIjpbIjU1NWIzMDJhMGRhN2ZjNjA1ZmU4MGYzZDc1NmQzYmNjXzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://english.mathrubhumi.com/polopoly_fs/1.1320909.1472644162!/image/image.jpg_gen/derivatives/landscape_894_577/image.jpg" width="500" height="300">
+        <h3>Idli Without Sambhar</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/dosa-home-sector-46/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gSWRsaSIsImRpc2hfaWRzIjpbIjIyODY2OTViODM1NmZmNzFlMTZhMTAwYTc2Y2U1OWM3XzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://images.healthshots.com/healthshots/hi/uploads/2021/11/29201838/Idli-vs-vada-1.jpg" width="500">
+        <h3>Idli Sambhar Vada</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/delhi-special-paranthe-wali-gali-1-sector-22/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gSWRsaSBTYW1iYXIiLCJkaXNoX2lkcyI6WyJlMjhhM2RlNDAyMzAyNzFjZjQxMTU5M2FjNmM0NWMwZF8yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</button></a></center>
+      </div>
+    </div><br><br>
+
+<! --beverages--> 
+<div class="beverages-heading" id="beverages-id"><b>BEVERAGES:&nbsp&nbsp<b><br></div><br><br>
+    <div class="beverages">
+      <div>
+        <img src="https://post.healthline.com/wp-content/uploads/2020/06/glass-drinking-water-1200x628-Facebook-1200x628.jpg">
+        <h3>Water</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/subway-sector-22/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gV2F0ZXIiLCJkaXNoX2lkcyI6WyI5NDYwMzcwYmIwY2ExYzk4YTc3OWIxYmNjNjg2MWMyY18yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://media.istockphoto.com/photos/soft-drink-being-poured-into-glass-picture-id533575209?k=20&m=533575209&s=612x612&w=0&h=IM2olxKR5DFaCrJRDl6_0R4drSa4hpUm29Qgjq-l41I=" width="500px">
+        <h3>Cold-Drink</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/subway-sector-22/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ29sZCBEcmluayIsImRpc2hfaWRzIjpbIjE0MGUxOWU2NzFkYjg2ODA5NmJkMTZkM2Y0YmY4YmY5XzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</a></button></center>
+      </div>
+      <div>
+        <img src="https://www.travelandleisureindia.in/wp-content/uploads/2019/01/Coconut-Water-Sellers-Feature.jpg">
+        <h3>Nariyal Paani</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/sector-8c-rasoi-sector-8/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gQ29jb251dCBXYXRlciIsImRpc2hfaWRzIjpbImU2MGM3ZmUwMWE1YjIwYjM4ODNmMGQ3NzlkNzk0MmI1XzIiXSwiY3Vpc2luZV9pZHMiOltdfX0%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://www.spicypunch.com/wp-content/uploads/2019/06/lassi-recipe.jpg">
+        <h3>Meethi-Lassi</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/amrit-sweets-phase-5-mohali/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gU3dlZXQgTGFzc2kiLCJkaXNoX2lkcyI6WyIyMjI2OTYzNDA5ZTI2ZmQzYjI0ZTUzODI5ZjViOTRmY18yIl0sImN1aXNpbmVfaWRzIjpbXX19">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://c4.wallpaperflare.com/wallpaper/473/944/965/glass-orange-shadow-juice-citrus-hd-wallpaper-preview.jpg" width="500" height="300">
+        <h3>Orange-Juice</h3>
+        <center><button><a href="https://www.zomato.com/chandigarh/subway-sector-22/order?contextual_menu_params=eyJkaXNoX3NlYXJjaCI6eyJ0aXRsZSI6IkJlc3QgaW4gT3JhbmdlIEp1aWNlIiwiZGlzaF9pZHMiOlsiOGMyNGYxNDZhZGU4ZTA1YTQwOGU2Yzg4Yjc0NGE0YThfMiJdLCJjdWlzaW5lX2lkcyI6W119fQ%3D%3D">Order</button></a></center>
+      </div>
+      <div>
+        <img src="https://media-rd.s3.amazonaws.com/embedded_image/2017/08/shutterstock_573811309.jpg" width="500">
+        <h3>Mango-Juice</h3>
+        <center><button><a href="https://www.zomato.com/thejuiceshop/order">Order</button></a></center>
+      </div>
+    </div><br><br><hr><br>
+    <div class="review" id=contact>
+     <center>
+          <form>
+		<p id="your-review">Your Review </p><br><br>
+		<input type="text" name="text" id="text" placeholder="Type Your Name" required><br><br>
+		<input type="email" name="email" id="email" placeholder="Type Your E-Mail" required><br><br><br><br>
+		<b><textarea placeholder="Type Your Review Here" name="textarea" id="textarea" required></textarea><b><br><br><br>
+		<input type="submit" name="submit" id="submit">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+		<input type="reset" name="reset" id="reset"><br><br><br><br>
+	   </form>
+	<h1 style="color:yellow; text-align:center">RATING</h1><br>
+		<div class="emoji"><center>
+		        <img class="emj1" src="https://cdn-icons-png.flaticon.com/512/743/743418.png" alt="1 STAR">
+			<img class="emj2" src="https://cdn-icons-png.flaticon.com/512/742/742752.png" alt="2 STAR">
+                        <img class="emj3" src="https://cdn-icons-png.flaticon.com/512/742/742774.png" alt="3 STAR">
+		        <img class="emj4" src="https://cdn-icons-png.flaticon.com/512/742/742750.png" alt="4 STAR">
+			<img class="emj5" src="https://cdn-icons-png.flaticon.com/512/743/743287.png" alt="5 STAR">
+                </div>
+      </center>
+    
+
+	</div>
+	<div style="background-image:linear-gradient(to bottom right,orange 70%,red);margin:10px 20px 10px 0px;
+		height:700px;
+		width:50%;
+		display:inline-block;
+		position:absolute;
+		padding:10px;">
+	<center><p id="contact-us">Contact Us</p><br><br><br></center>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eget ipsum libero. Quisque sed arcu quis felis finibus rhoncus. Sed sit amet tempus sem. In semper elit dui, in facilisis lectus finibus dapibus. Vivamus felis metus, imperdiet vel convallis sit amet, vehicula nec nunc. Vestibulum sollicitudin turpis vel tortor molestie condimentum. Quisque eu tempus augue. Aliquam posuere ante nec massa dapibus, id consectetur eros condimentum. Praesent rutrum elementum leo id vestibulum. </p><br><br><br><br>
+	<table class="table">
+	<tr>
+	<th>Phone Number:&nbsp&nbsp&nbsp</th>
+	<td>7000770007</td>
+	</tr>
+	<tr>
+	<th>E-Mail ID:&nbsp&nbsp&nbsp</th>
+	<td>lemonfoods@gmail.com</td>
+	</tr>
+	<th>Address:&nbsp&nbsp&nbsp</th>	
+	<td>Near Sadar Bazaar, Sector 19-C, Chandigarh</td>
+	</tr>
+</table><br><br><br><br><br><br><br>
+	<h1 style="color:#9600ff; text-align:center">SOCIAL MEDIA</h1><br>
+		<div class="icon"><center>
+		        <img class="img1" src="https://cdn-icons-png.flaticon.com/512/1312/1312139.png" alt="Facebook">
+			<img class="img2" src="https://cdn-icons-png.flaticon.com/512/5968/5968534.png" alt="G-Mail">
+                        <img style="border-radius:50%" class="img3" src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png" alt="Instagram">
+		        <img class="img4" src="https://cdn-icons-png.flaticon.com/512/906/906377.png" alt="Telegram">
+			<img class="img5" src="https://cdn-icons-png.flaticon.com/512/187/187209.png" alt="YouTube">
+                </div>
+	 </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
